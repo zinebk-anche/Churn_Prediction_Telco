@@ -14,6 +14,8 @@ This project addresses the issue of customer churn at a telecommunications compa
 - **Source:** [Kaggle - Telco Customer Churn](https://www.kaggle.com/blastchar/telco-customer-churn)  
 - **Description:** Contains information about customers' services, account details, and demographics, including churn status.  
 - **Target Variable:** `Churn` (Binary: Yes/No)
+  ### Churn Distribution
+![Churn Distribution](churn_distribution.png)
 
   ## Tools & Technologies
 - **Programming Language:** Python  
@@ -24,21 +26,25 @@ This project addresses the issue of customer churn at a telecommunications compa
 ## Methodology
 ### 1. Data Exploration
 - Handled missing values and outliers.  
-- Renamed columns and standardize values for consistency.
+- Renamed columns and standardized values for consistency.
 
 ### 2. Data Splitting  
 - Split data into **train**, **validation**, and **test** sets.  
 
 ### 3. Feature Analysis  
 - Conducted exploratory data analysis (EDA) to understand feature distributions and relationships.  
-- Identified key features contributing to customer churn.  
+- Identified key features contributing to customer churn.
+
+### Correlation Heatmap
+![Correlation Heatmap](correlation_heatmap.png)
+
 
 ### 5. Data Transformation  
 - Encoded categorical variables into numerical representations.  
 - Scaled numerical features for uniformity across the dataset.  
 
 ### 6. Modeling  
-- Trained and tested two **Logistic Regression** model (using all features, and using the most important features).  
+- Trained and tested two **Logistic Regression** models (using all features, and using the most important features).  
 - Evaluated model performance using:  
   - **Accuracy**  
   - **Precision**  
@@ -62,10 +68,10 @@ This project addresses the issue of customer churn at a telecommunications compa
 Model 1 = Using all features
 Model 2 = Using only the important features
 
--**Accuracy**: Model 1 is more reliable in correctly predicting customer churn and retention overall. However, the difference in accuracy is minimal (only 2%), so this difference may not significantly affect the overall business strategy.
--**Precision**: Model 1 has a better precision, meaning that it is more accurate when predicting customers who will churn. This means that Model 1 has fewer false positives, i.e., fewer customers who are predicted to churn but actually stay.
--**Recall**: Model 1 is better at capturing the actual churn cases, meaning fewer false negatives (customers who actually churn but are not identified by the model).
--**F1-score**: Model 1 has a better balance between precision and recall, making it the better overall model for this churn prediction scenario where both false positives and false negatives matter.
+- **Accuracy**: Model 1 is more reliable in correctly predicting customer churn and retention overall. However, the difference in accuracy is minimal (only 2%), so this difference may not significantly affect the overall business strategy.
+- **Precision**: Model 1 has a better precision, meaning that it is more accurate when predicting customers who will churn. This means that Model 1 has fewer false positives, i.e., fewer customers who are predicted to churn but actually stay.
+- **Recall**: Model 1 is better at capturing the actual churn cases, meaning fewer false negatives (customers who actually churn but are not identified by the model).
+- **F1-score**: Model 1 has a better balance between precision and recall, making it the better overall model for this churn prediction scenario where both false positives and false negatives matter.
 
 ### 7.2 ROC Curve 
 - Model 1 :
@@ -74,9 +80,19 @@ Model 2 = Using only the important features
 - Model 2:
   ![ROC Curve](roc_curve_2.png)
 
+### 7.3 AUC Score 
+
+| Model       | AUC Score |
+|-------------|-----------|
+| **Model 1** | 0.74      |
+| **Model 2** | 0.71      |
+
+- **Model 1** demonstrates a stronger ability to distinguish between churn and non-churn customers, with a higher AUC score.
+
 ### 8. Key insights
 
 1. **Contract Type and Client Retention**
+![Churn vs Contract Type](contract_type_vs_churn.png)
    - **Month-to-month contract clients** are more likely to churn. This suggests that customers with flexible, short-term contracts are not as committed to staying with the company. Consider offering incentives to encourage month-to-month customers to upgrade to one- or two-year contracts to reduce churn.
    - **One-year and two-year contract clients**, on the other hand, are more loyal, with two-year contracts showing the highest retention. This indicates that long-term contracts can be a key strategy for boosting customer loyalty and ensuring a steady revenue stream.
    - **Recommendation**: Promote longer contract options through targeted marketing to clients currently on month-to-month plans.
@@ -98,6 +114,7 @@ Model 2 = Using only the important features
    - **Recommendation**: Invest in expanding fiber optic service offerings to attract and retain customers. Additionally, offer incentives for customers using DSL or without internet service to upgrade.
 
 6. **Monthly Charges**
+![Churn vs Monthly Charges](Monthly_Charges_vs_churn.png)
    - There is a slight correlation between **monthly charges** and customer retention. Higher charges do not seem to significantly drive churn, suggesting that customers are willing to pay for quality service but may need better value propositions to stay.
 
 7. **Tech Support**
@@ -105,6 +122,7 @@ Model 2 = Using only the important features
    - **Recommendation**: Strengthen customer service, particularly for those who rely on tech support, to enhance satisfaction and reduce churn. Consider offering 24/7 support or priority tech assistance for loyal customers.
 
 8. **Tenure**
+![Churn vs Tenure](Tenure_vs_churn.png)
    - Customers who have been with the company for a **longer tenure** are less likely to churn. This reinforces the idea that established customers are more committed, and the longer a customer stays, the more likely they are to remain loyal.
    - **Recommendation**: Focus on increasing customer tenure by offering loyalty benefits, such as exclusive discounts or rewards, to encourage longer relationships.
 
@@ -113,8 +131,19 @@ Model 2 = Using only the important features
    - **Recommendation**: Although total charges are not directly correlated with churn, consider using billing transparency and offering flexible payment plans as part of a broader retention strategy.
 
 ---
+## Conclusion
 By focusing on **contract types**, **service offerings** (like fiber optic and device protection), and emphasizing **customer loyalty** through tenure-based incentives and tailored marketing, the company can enhance its retention efforts and reduce churn.
 
+---
+## Suggestions for Further Improvement:
+1. For this project, I have used DictVectorizer to encode the categorical features. When performing one-hot encoding using `DictVectorizer`, we may encounter the issue of **multicollinearity**. For example, the one-hot encoding of `Contract` (e.g., `Month-to-month`, `One year`, `Two year`) could introduce redundant columns that represent similar information, which could lead to model instability.
+- To address the issues caused by `DictVectorizer`, here are a few alternative approaches and solutions:
+  1.  **Drop One Category (Dummy Variable Trap)**: In the case of one-hot encoding, we can drop one of the categories to avoid multicollinearity.
+  2.  **Use `OneHotEncoder` from Scikit-learn**:  **`OneHotEncoder`** can handle the multicollinearity problem by automatically removing one category in each feature when applying one-hot encoding.
 
+2. Adding hyperparameter tuning for logistic regression or other models (e.g., Random Forest, XGBoost) to improve performance.
+
+
+      
 
 
