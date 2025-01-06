@@ -63,7 +63,7 @@ This project addresses the issue of customer churn at a telecommunications compa
 | **Model**    | Logistic Regression  | Logistic Regression |
 | **Accuracy** | 81%                  | 79%                 |
 | **Precision**| 62%                  | 57%                 |
-| **Recall**   | 59%                  | 52%                 |
+| **Recall**   | 59%                  | 57%                 |
 | **F1-score** | 61%                  | 57%                 |
 
 Model 1 = Using all features
