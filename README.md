@@ -15,7 +15,7 @@ This project addresses the issue of customer churn at a telecommunications compa
 - **Description:** Contains information about customers' services, account details, and demographics, including churn status.  
 - **Target Variable:** `Churn` (Binary: Yes/No)
   ### Churn Distribution
-![Churn Distribution](churn_distribution.png)
+<img src="churn_distribution.png" width="300"/>
 
   ## Tools & Technologies
 - **Programming Language:** Python  
@@ -36,7 +36,8 @@ This project addresses the issue of customer churn at a telecommunications compa
 - Identified key features contributing to customer churn.
 
 ### Correlation Heatmap
-![Correlation Heatmap](correlation_heatmap.png)
+
+<img src="correlation_heatmap.png" width="300"/>
 
 
 ### 5. Data Transformation  
@@ -75,10 +76,10 @@ Model 2 = Using only the important features
 
 ### 7.2 ROC Curve 
 - Model 1 :
-  ![ROC Curve](roc_curve_1.png)
+  <img src="roc_curve_1.png" width="300"/>
   
 - Model 2:
-  ![ROC Curve](roc_curve_2.png)
+  <img src="roc_curve_2.png" width="300"/>
 
 ### 7.3 AUC Score 
 
@@ -92,41 +93,42 @@ Model 2 = Using only the important features
 ### 8. Key insights
 
 1. **Contract Type and Client Retention**
-![Churn vs Contract Type](contract_type_vs_churn.png)
+<img src="contract_type_vs_churn.png" width="300"/>
    - **Month-to-month contract clients** are more likely to churn. This suggests that customers with flexible, short-term contracts are not as committed to staying with the company. Consider offering incentives to encourage month-to-month customers to upgrade to one- or two-year contracts to reduce churn.
    - **One-year and two-year contract clients**, on the other hand, are more loyal, with two-year contracts showing the highest retention. This indicates that long-term contracts can be a key strategy for boosting customer loyalty and ensuring a steady revenue stream.
    - **Recommendation**: Promote longer contract options through targeted marketing to clients currently on month-to-month plans.
 
-2. **Dependents**
+3. **Dependents**
    - Clients with **dependents** are less likely to churn, suggesting that households with dependents may value stability and be more committed to staying with the company. 
    - **Recommendation**: Develop targeted offers or loyalty programs for clients with dependents, emphasizing stability and long-term benefits.
 
-3. **Device Protection**
+4. **Device Protection**
    - **Clients with device protection** are more likely to stay. This could indicate that customers who feel more secure (with device protection) are less inclined to leave.
    - **Recommendation**: Focus on upselling device protection to customers, as it can increase customer retention and satisfaction. Similarly, target promotions to customers without protection to highlight the benefits.
 
-4. **Gender**
+5. **Gender**
    - Gender has a minimal impact on churn rates, with both male and female clients showing similar tendencies to stay or leave. This suggests that gender is not a significant factor in customer loyalty for the company.
    - **Recommendation**: Ensure that marketing and retention strategies are gender-neutral and focus on other more impactful factors.
 
-5. **Internet Service**
+6. **Internet Service**
    - **Fiber optic internet service clients** have the highest retention rates, highlighting the growing demand for high-speed internet. Conversely, clients with **DSL** are more prone to churn.
    - **Recommendation**: Invest in expanding fiber optic service offerings to attract and retain customers. Additionally, offer incentives for customers using DSL or without internet service to upgrade.
 
-6. **Monthly Charges**
-![Churn vs Monthly Charges](Monthly_Charges_vs_churn.png)
+7. **Monthly Charges**
+<img src="Monthly_Charges_vs_churn.png" width="300"/>
    - There is a slight correlation between **monthly charges** and customer retention. Higher charges do not seem to significantly drive churn, suggesting that customers are willing to pay for quality service but may need better value propositions to stay.
 
-7. **Tech Support**
+8. **Tech Support**
    - Clients without **tech support** are more likely to stay, indicating that those who require assistance may be more vulnerable to frustration and churn. It’s possible that a lack of tech support triggers dissatisfaction, leading to higher churn.
    - **Recommendation**: Strengthen customer service, particularly for those who rely on tech support, to enhance satisfaction and reduce churn. Consider offering 24/7 support or priority tech assistance for loyal customers.
 
-8. **Tenure**
-![Churn vs Tenure](Tenure_vs_churn.png)
+9. **Tenure**
+
+<img src="Tenure_vs_churn.png" width="300"/>
    - Customers who have been with the company for a **longer tenure** are less likely to churn. This reinforces the idea that established customers are more committed, and the longer a customer stays, the more likely they are to remain loyal.
    - **Recommendation**: Focus on increasing customer tenure by offering loyalty benefits, such as exclusive discounts or rewards, to encourage longer relationships.
 
-9. **Total Charges**
+10. **Total Charges**
    - **Total charges** do not appear to have a significant impact on churn. This could suggest that once customers have signed up for a service, they may not closely monitor or be influenced by the total charges alone.
    - **Recommendation**: Although total charges are not directly correlated with churn, consider using billing transparency and offering flexible payment plans as part of a broader retention strategy.
 
