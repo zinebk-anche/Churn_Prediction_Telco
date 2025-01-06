@@ -75,11 +75,14 @@ Model 2 = Using only the important features
 - **F1-score**: Model 1 has a better balance between precision and recall, making it the better overall model for this churn prediction scenario where both false positives and false negatives matter.
 
 ### 7.2 ROC Curve 
+
 - Model 1 :
-  <img src="roc_curve_1.png" width="500"/>
+
+<img src="roc_curve_1.png" width="500"/>
   
 - Model 2:
-  <img src="roc_curve_2.png" width="500"/>
+  
+<img src="roc_curve_2.png" width="500"/>
 
 ### 7.3 AUC Score 
 
