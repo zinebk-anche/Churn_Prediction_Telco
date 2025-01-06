@@ -94,6 +94,7 @@ Model 2 = Using only the important features
 
 1. **Contract Type and Client Retention**
 <img src="contract_type_vs_churn.png" width="500"/>
+
    - **Month-to-month contract clients** are more likely to churn. This suggests that customers with flexible, short-term contracts are not as committed to staying with the company. Consider offering incentives to encourage month-to-month customers to upgrade to one- or two-year contracts to reduce churn.
    - **One-year and two-year contract clients**, on the other hand, are more loyal, with two-year contracts showing the highest retention. This indicates that long-term contracts can be a key strategy for boosting customer loyalty and ensuring a steady revenue stream.
    - **Recommendation**: Promote longer contract options through targeted marketing to clients currently on month-to-month plans.
@@ -116,7 +117,8 @@ Model 2 = Using only the important features
 
 7. **Monthly Charges**
 <img src="Monthly_Charges_vs_churn.png" width="500"/>
-   - There is a slight correlation between **monthly charges** and customer retention. Higher charges do not seem to significantly drive churn, suggesting that customers are willing to pay for quality service but may need better value propositions to stay.
+
+- There is a slight correlation between **monthly charges** and customer retention. Higher charges do not seem to significantly drive churn, suggesting that customers are willing to pay for quality service but may need better value propositions to stay.
 
 8. **Tech Support**
    - Clients without **tech support** are more likely to stay, indicating that those who require assistance may be more vulnerable to frustration and churn. It’s possible that a lack of tech support triggers dissatisfaction, leading to higher churn.
@@ -125,12 +127,14 @@ Model 2 = Using only the important features
 9. **Tenure**
 
 <img src="Tenure_vs_churn.png" width="500"/>
-   - Customers who have been with the company for a **longer tenure** are less likely to churn. This reinforces the idea that established customers are more committed, and the longer a customer stays, the more likely they are to remain loyal.
-   - **Recommendation**: Focus on increasing customer tenure by offering loyalty benefits, such as exclusive discounts or rewards, to encourage longer relationships.
+
+- Customers who have been with the company for a **longer tenure** are less likely to churn. This reinforces the idea that established customers are more committed, and the longer a customer stays, the more likely they are to remain loyal.
+- **Recommendation**: Focus on increasing customer tenure by offering loyalty benefits, such as exclusive discounts or rewards, to encourage longer relationships.
 
 10. **Total Charges**
-   - **Total charges** do not appear to have a significant impact on churn. This could suggest that once customers have signed up for a service, they may not closely monitor or be influenced by the total charges alone.
-   - **Recommendation**: Although total charges are not directly correlated with churn, consider using billing transparency and offering flexible payment plans as part of a broader retention strategy.
+
+- **Total charges** do not appear to have a significant impact on churn. This could suggest that once customers have signed up for a service, they may not closely monitor or be influenced by the total charges alone.
+- **Recommendation**: Although total charges are not directly correlated with churn, consider using billing transparency and offering flexible payment plans as part of a broader retention strategy.
 
 ---
 ## Conclusion
