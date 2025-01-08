@@ -15,7 +15,7 @@ This project addresses the issue of customer churn at a telecommunications compa
 - **Description:** Contains information about customers' services, account details, and demographics, including churn status.  
 - **Target Variable:** `Churn` (Binary: Yes/No)
   ### Churn Distribution
-<img src="churn_distribution.png" width="500"/>
+<img src="Graphs/churn_distribution.png" width="500"/>
 
   ## Tools & Technologies
 - **Programming Language:** Python  
@@ -37,7 +37,7 @@ This project addresses the issue of customer churn at a telecommunications compa
 
 ### Correlation Heatmap
 
-<img src="correlation_heatmap.png" width="500"/>
+<img src="Graphs/correlation_heatmap.png" width="500"/>
 
 
 ### 5. Data Transformation  
@@ -78,11 +78,11 @@ Model 2 = Using only the important features
 
 - Model 1 :
 
-<img src="roc_curve_1.png" width="500"/>
+<img src="Graphs/roc_curve_1.png" width="500"/>
   
 - Model 2:
   
-<img src="roc_curve_2.png" width="500"/>
+<img src="Graphs/roc_curve_2.png" width="500"/>
 
 ### 7.3 AUC Score 
 
@@ -96,7 +96,7 @@ Model 2 = Using only the important features
 ### 8. Key insights
 
 1. **Contract Type and Client Retention**
-<img src="contract_type_vs_churn.png" width="500"/>
+<img src="Graphs/contract_type_vs_churn.png" width="500"/>
 
    - **Month-to-month contract clients** are more likely to churn. This suggests that customers with flexible, short-term contracts are not as committed to staying with the company. Consider offering incentives to encourage month-to-month customers to upgrade to one- or two-year contracts to reduce churn.
    - **One-year and two-year contract clients**, on the other hand, are more loyal, with two-year contracts showing the highest retention. This indicates that long-term contracts can be a key strategy for boosting customer loyalty and ensuring a steady revenue stream.
@@ -119,7 +119,7 @@ Model 2 = Using only the important features
    - **Recommendation**: Invest in expanding fiber optic service offerings to attract and retain customers. Additionally, offer incentives for customers using DSL or without internet service to upgrade.
 
 7. **Monthly Charges**
-<img src="Monthly_Charges_vs_churn.png" width="500"/>
+<img src="Graphs/Monthly_Charges_vs_churn.png" width="500"/>
 
 - There is a slight correlation between **monthly charges** and customer retention. Higher charges do not seem to significantly drive churn, suggesting that customers are willing to pay for quality service but may need better value propositions to stay.
 
@@ -129,7 +129,7 @@ Model 2 = Using only the important features
 
 9. **Tenure**
 
-<img src="Tenure_vs_churn.png" width="500"/>
+<img src="Graphs/Tenure_vs_churn.png" width="500"/>
 
 - Customers who have been with the company for a **longer tenure** are less likely to churn. This reinforces the idea that established customers are more committed, and the longer a customer stays, the more likely they are to remain loyal.
 - **Recommendation**: Focus on increasing customer tenure by offering loyalty benefits, such as exclusive discounts or rewards, to encourage longer relationships.
